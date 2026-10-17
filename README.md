@@ -14,6 +14,7 @@ If you have both of these ready, follow these steps:
 1. On **Streamer.bot**, go to **Server/Clients → WebSocket Server** and make sure it is running.
 2. Open the [Settings Page](https://vortisrd.github.io/credits) in your browser.
 3. Choose your desired options.
+4. **Don't forget select a platform to tie CreditsRD to.** It will detect when a stream on that platform starts then it will clean the credits database to start collecting newer events.
 4. Click **"Copy URL"**.
 5. Add the copied URL as a Browser Source in OBS.
 
