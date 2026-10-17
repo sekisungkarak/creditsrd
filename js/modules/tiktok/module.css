@@ -1,0 +1,9 @@
+#tiktok .header {
+    border-bottom: .25cqw solid color-mix(in srgb, #25f4ee 75%,transparent);
+}
+
+
+#tiktok .pill {
+    background: color-mix(in srgb, #25f4ee 50%, transparent);
+    border-color: color-mix(in srgb, #25f4ee 75%, transparent);
+}

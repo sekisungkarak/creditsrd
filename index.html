@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" class="wa-dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CreditsRD - A Multistream End Credits Overlay by @VortisRD</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="css/settings.css">
+
+    <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.10.0/styles/webawesome.css" />
+    <script type="module" src="https://ka-f.webawesome.com/webawesome@3.10.0/webawesome.loader.js"></script>
+
+
+
+    <!-- SEO !? -->
+    <meta name="description" content="A Multistream End Credits Overlay. Supports Twitch, YouTube, TikTok and Kick.">
+    
+    <link rel="canonical" href="https://vortisrd.github.io/creditsrd/">
+
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="CreditsRD - Multistream Chat Widget by @VortisRD">
+    <meta property="og:description" content="A Multistream End Credits Overlay. Supports Twitch, YouTube, TikTok and Kick.">
+    <meta property="og:image" content="https://vortisrd.github.io/creditsrd/images/creditsrd-social-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200"> 
+    <meta property="og:image:alt" content="CreditsRD interface overlay showing unified events">
+    <meta property="og:url" content="https://vortisrd.github.io/creditsrd/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CreditsRD - A Multistream End Credits Overlay by @VortisRD">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CreditsRD - A Multistream End Credits Overlay by @VortisRD">
+    <meta name="twitter:description" content="A Multistream End Credits Overlay. Supports Twitch, YouTube, TikTok and Kick.">
+    <meta name="twitter:image" content="https://vortisrd.github.io/creditsrd/images/creditsrd-social-image.jpg">
+    <meta name="twitter:site" content="@VortisRD">
+
+    <!-- GEO !? -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "CreditsRD",
+            "alternateName": "CreditsRD - Multistream Chat Widget",
+            "description": "A Multistream End Credits Overlay. Supports Twitch, YouTube, TikTok and Kick.",
+            "url": "https://vortisrd.github.io/creditsrd/",
+            "image": "https://vortisrd.github.io/creditsrd/images/creditsrd-social-image.jpg",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Web",
+            "browserRequirements": "Requires JavaScript",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Rodrigo Emanuel (@VortisRD)",
+                "url": "https://rodrigoemanuel.com"
+            }
+        }
+    </script>
+
+
+
+    <link rel="apple-touch-icon" href="images/icons/icon-180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon.png">
+    <link rel="manifest" href="images/icons/manifest.json">
+    <meta name="theme-color" content="#121212">
+
+
+
+</head>
+<body>
+
+    <div id="container">
+        <div class="wrapper">
+            <div id="settings">
+
+                <header>
+                    <h1>CreditsRD</h1>
+
+                    <div data-i18n-html="readme.text">
+                        Learn how to set it up by <a target="_blank" href="https://github.com/vortisrd/creditsrd/blob/main/README.md">reading the documentation</a>.
+                    </div>
+                </header>
+
+
+
+                <!-- ── Streamer.bot ───────────────────────────────────────── -->
+                <wa-details id="streamerbot" class="section" open>
+
+                    <span class="header" slot="summary">
+                        <span class="title"><img src="images/logo-streamerbot.png" alt="Streamer.bot"> <span data-i18n="streamerbot.title">Streamer.bot</span></span>
+                        <span class="check">
+                            <span class="status">
+                                <wa-badge variant="danger" pill></wa-badge>
+                                <wa-badge variant="success" pill></wa-badge>
+                            </span>
+                        </span>
+                    </span>
+                    
+                    <div class="config slider">
+                        <div class="info">
+                            <div class="title" data-i18n="streamerbot.server">Server IP</div>
+                        </div>
+                        <div class="element">
+                            <wa-input data-setting="streamerBotServerAddress" data-default="127.0.0.1" value="127.0.0.1" autocomplete="off"></wa-input>
+                        </div>
+                    </div>
+                    
+                    <div class="config slider">
+                        <div class="info">
+                            <div class="title" data-i18n="streamerbot.port">Port</div>
+                        </div>
+                        <div class="element">
+                            <wa-input data-setting="streamerBotServerPort" data-default="8080" value="8080" autocomplete="off"></wa-input>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="streamerbot.schema">Secure Connection (WSS)</div>
+                            <div class="description"><small data-i18n-html="streamerbot.schema_hint">Enable if Streamer.bot is on a remote server (VPS) with HTTPS/TLS. <strong><u>Leave it off if you don't know what you're doing</u> 😊</strong></small></div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="streamerBotWSS" data-default="false" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                </wa-details>
+                
+
+
+
+
+
+                
+
+                <!-- ── General / Setup ───────────────────────────────────── -->
+                <wa-details id="setup" class="section">
+                    <span class="header" slot="summary">
+                        <span class="title"><i class="ri-settings-4-fill"></i> <span data-i18n="general.title">Global Settings</span></span>
+                    </span>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="general.demo_mode">Demonstration Mode</div>
+                            <div class="description"><small data-i18n="general.demo_mode_hint">Starts CreditsRD in test mode, throwing random events</small></div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="testMode" data-default="false" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <wa-divider></wa-divider>
+
+                    <div class="config">
+                        <div class="info">
+                            <div class="title" data-i18n="general.language">Language</div>
+                            <div class="description"><small data-i18n="general.language_hint">Set CreditsRD's language.</small></div>
+                        </div>
+                        <div class="element">
+                            <wa-select data-setting="lang" data-default="en" id="i18n-locale-selector"> 
+                                <wa-option value="de">Deutsch</wa-option>
+                                <wa-option value="en" selected>English</wa-option>
+                                <wa-option value="es-ES">Español</wa-option>
+                                <wa-option value="fr-FR">Français</wa-option>
+                                <wa-option value="it-IT">Italiano</wa-option>
+                                <wa-option value="pt-BR">Português (Brasil)</wa-option>
+                                <wa-option value="pl">Polski</wa-option>
+                                <wa-option value="tl-PH">Filipino</wa-option>
+                            </wa-select>
+                        </div>
+                    </div>
+
+                    <wa-divider></wa-divider>
+
+                    <div class="config">
+                        <div class="info">
+                            <div class="title" data-i18n="general.tie">Tie to Platform</div>
+                            <div class="description"><small data-i18n-html="general.tie_hint">Upon starting the stream on the selected platform,<br>CreditsRD will clean the previous data from the database<br>and start anew.</small></div>
+                        </div>
+                        <div class="element">
+                            <wa-select data-setting="platform" data-default="twitch"> 
+                                <wa-option value="twitch" selected>Twitch</wa-option>
+                                <wa-option value="youtube">YouTube</wa-option>
+                                <wa-option value="kick">Kick</wa-option>
+                                <wa-option value="tiktok">TikTok</wa-option>
+                            </wa-select>
+                        </div>
+                    </div>
+
+                    <wa-callout size="s">
+                        <wa-icon slot="icon" name="circle-info"></wa-icon>
+                        <span data-i18n-html="general.tie_info">To restart the credits from the beginning every time the scene appears, enable <strong><u>refresh browser when scene becomes active</u></strong> on your streaming app, and keep <strong><u>shutdown source when not visible</u></strong> disabled so events keep being collected.</span>
+                    </wa-callout>
+
+                    <div class="config slider">
+                        <div class="info">
+                            <div class="title" data-i18n="general.credits_title">Title</div>
+                        </div>
+                        <div class="element">
+                            <wa-input data-setting="title" data-default="Thank you for watching!" value="Thank you for watching!" autocomplete="off"></wa-input>
+                        </div>
+                    </div>
+
+                    <div class="config slider">
+                        <div class="info">
+                            <div class="title" data-i18n="general.credits_summary">Summary</div>
+                        </div>
+                        <div class="element">
+                            <wa-input data-setting="summary" data-default="See you next time. 😁" value="See you next time. 😁" autocomplete="off"></wa-input>
+                        </div>
+                    </div>
+                    
+                    <div class="config slider">
+                        <div class="info">
+                            <div class="title" data-i18n="general.limit">Events Limiter</div>
+                            <div class="description"><small data-i18n-html="general.limit_hint">Caps the number of events displayed.<br>(Zero for unlimited).</small></div>
+                        </div>
+                        <div class="element">
+                            <wa-number-input data-setting="limit" value="15" data-default="15"></wa-number-input>
+                        </div>
+                    </div>
+
+                    <wa-divider></wa-divider>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="general.avatars">Avatars</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showAvatar" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                </wa-details>
+                
+
+
+
+
+
+                
+
+                <!-- ── Styling ────────────────────────────────────────────── -->
+                <wa-details id="style" class="section">
+                    <span class="header" slot="summary">
+                        <span class="title"><i class="ri-paint-fill"></i> <span data-i18n="style.title">Visual Styles</span></span>
+                    </span>
+                    
+                    <div class="config">
+                        <div class="info">
+                            <div class="title" data-i18n="general.font_family">Font Family</div>
+                            <div class="description"><small data-i18n="general.font_family_hint">Changes CreditsRD's font</small></div>
+                        </div>
+                        <div class="element">
+                            <wa-input data-setting="font" data-default="DM Sans" value="DM Sans" autocomplete="off"></wa-input>
+                        </div>
+                    </div>
+
+                    <div class="config full" style="display: none;">
+                        <wa-select id="CreditsRDSelectSystemFont">
+                        </wa-select>
+                    </div>
+
+                    <div class="config full" style="display: none;">
+                        <wa-button id="CreditsRDLoadFontsFromSystem" variant="brand">
+                            <wa-icon name="font"></wa-icon>
+                            <span data-i18n="style.load_system_fonts">Load System Fonts</span>
+                        </wa-button>
+                    </div>
+
+                    <wa-divider></wa-divider>
+                    
+                    <div class="config slider">
+                        <div class="info">
+                            <div class="title" data-i18n="general.speed">Speed</div>
+                            <div class="description"><small data-i18n="general.speed_hint">Changes CreditsRD's speed</small></div>
+                        </div>
+                        <div class="element">
+                            <wa-slider class="slider_percent" data-setting="speed" data-default="1" min="0.1" max="3" value="1" step="0.1" with-tooltip></wa-slider>
+                        </div>
+                    </div>
+
+                    <wa-divider></wa-divider>
+                    
+                    <div class="config slider">
+                        <div class="info">
+                            <div class="title" data-i18n="general.size">Size</div>
+                            <div class="description"><small data-i18n="general.size_hint">Changes CreditsRD's size</small></div>
+                        </div>
+                        <div class="element">
+                            <wa-slider class="slider_percent" data-setting="size" data-default="1" min="0.1" max="3" value="1" step="0.1" with-tooltip></wa-slider>
+                        </div>
+                    </div>
+
+                    <div class="config slider">
+                        <div class="info">
+                            <div class="title" data-i18n="general.color">Color</div>
+                            <div class="description"><small data-i18n="general.color_hint">Changes CreditsRD's font color</small></div>
+                        </div>
+                        <div class="element">
+                            <wa-color-picker data-setting="color" size="s" data-default="#FFFFFF" value="#FFFFFF"></wa-color-picker>
+                        </div>
+                    </div>
+
+
+                </wa-details>
+
+
+
+
+
+
+
+                <!-- ── Twitch ─────────────────────────────────────────────── -->
+                <wa-details id="twitch" class="section">
+                    <span class="header" slot="summary">
+                        <span class="title"><img src="js/modules/twitch/images/logo-twitch.svg"> <span data-i18n="twitch.title">Twitch</span></span>
+                        <span class="check"><wa-switch data-setting="showTwitch" data-default="false" class="section-switch" size="xl"></wa-switch></span>
+                    </span>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="twitch.followers">Followers</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showTwitchFollows" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="twitch.bits">Bits</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showTwitchBits" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="twitch.subscriptions">Subscriptions</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showTwitchSubs" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n-html="twitch.gifted_subs"><i class="ri-corner-down-right-line"></i> Gifted Subs</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showTwitchGiftedSubs" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="twitch.powerups">Power-up Redemptions</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showTwitchPowerUpRedemptions" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="twitch.raids">Raids</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showTwitchRaids" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                </wa-details>
+
+
+
+
+
+
+
+                <!-- ── YouTube ───────────────────────────────────────────── -->
+                <wa-details id="youtube" class="section">
+                    <span class="header" slot="summary">
+                        <span class="title"><img src="js/modules/youtube/images/logo-youtube.svg"> <span data-i18n="youtube.title">YouTube</span></span>
+                        <span class="check"><wa-switch data-setting="showYoutube" data-default="false" class="section-switch" size="xl"></wa-switch></span>
+                    </span>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="youtube.superchat">Super Chat</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showYouTubeSuperChats" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="youtube.super_sticker">Super Sticker</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showYouTubeSuperStickers" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="youtube.memberships">Membership</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showYouTubeMemberships" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n-html="youtube.gifted_membership"><i class="ri-corner-down-right-line"></i> Gifted Memberships</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showYouTubeGiftMemberships" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="youtube.jewels">Jewels</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showYouTubeJewels" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                </wa-details>
+
+
+
+
+
+
+
+                <!-- ── Kick ──────────────────────────────────────────────── -->
+                <wa-details id="kick" class="section">
+                    <span class="header" slot="summary">
+                        <span class="title"><img src="js/modules/kick/images/logo-kick.svg"> <span data-i18n="kick.title">Kick</span></span>
+                        <span class="check"><wa-switch data-setting="showKick" data-default="false" class="section-switch" size="xl"></wa-switch></span>
+                    </span>
+
+                    <div class="config">
+                        
+                        <wa-callout size="s">
+                            <wa-icon slot="icon" name="circle-info"></wa-icon>
+                            <span data-i18n-html="kick.api_warning">During peak usage, <strong>Kick's API becomes unstable</strong> and takes longer to relay events. This is not an issue with Streamer.bot or CreditsRD. Kick has <em>"infinite money glitch"</em>, so I hope it gets better in the future. 😣</span>
+                        </wa-callout>
+
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="kick.followers">Followers</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showKickFollows" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="kick.kicks_gift">Kicks Gift</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showKickKicks" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="kick.subscriptions">Subscriptions</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showKickSubs" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n-html="kick.gifted_subs"><i class="ri-corner-down-right-line"></i> Gifted Subs</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showKickGiftedSubs" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                </wa-details>
+
+
+
+
+
+
+
+                <!-- ── TikTok ─────────────────────────────────────────────── -->
+                <wa-details id="tiktok" class="section">
+                    <span class="header" slot="summary">
+                        <span class="title"><img src="js/modules/tiktok/images/logo-tiktok.svg"> <span data-i18n="tiktok.title">TikTok</span></span>
+                        <span class="check"><wa-switch data-setting="showTiktok" data-default="false" class="section-switch" size="xl"></wa-switch></span>
+                    </span>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="tiktok.followers">Followers</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showTikTokFollows" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="tiktok.likes">Likes</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showTikTokLikes" data-default="false" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="tiktok.shares">Shares</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showTikTokShares" data-default="false" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="tiktok.gifts">Gifts</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showTikTokGifts" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+
+                    <div class="config">
+                        <div class="info">    
+                            <div class="title" data-i18n="tiktok.superfans">SuperFans/Subscribers</div>
+                        </div>
+                        <div class="element">
+                            <wa-switch data-setting="showTikTokSubs" data-default="true" size="xl"></wa-switch>
+                        </div>
+                    </div>
+                    
+
+                </wa-details>
+
+
+
+
+
+
+
+            </div>
+
+
+            <div id="preview">
+                <iframe id="CreditsRDPreview" src="" frameborder="0"></iframe>
+            </div>
+
+
+
+
+
+            
+        </div>
+
+        <footer>
+
+            <div class="url-bar">
+                <button id="copyUrlButton" data-i18n="footer.copy_url">Copy URL</button>
+                <button id="openImportModal" data-i18n="footer.import_settings">Import Settings</button>
+            </div>
+
+            <div class="credits">
+                
+                <div class="links" style="display: none">
+                    <p data-i18n-html="footer.made_by">Made with ❤️ by <strong>VortisRD</strong></p>
+                
+                    <p>
+                        <a target="_blank" href="https://twitch.com/vortisrd"><i class="ri-twitch-fill"></i></a>
+                        <a target="_blank" href="https://youtube.com/@vortisrd"><i class="ri-youtube-fill"></i></a>
+                        <a target="_blank" href="https://kick.com/vortisrd"><i class="ri-kick-line"></i></a>
+                        <a target="_blank" href="https://tiktok.com/@vortisrd"><i class="ri-tiktok-fill"></i></a>
+                        <a target="_blank" href="https://x.com/vortisrd"><i class="ri-twitter-x-fill"></i></a>
+                        <a target="_blank" href="https://github.com/vortisrd"><i class="ri-github-fill"></i></a>
+                    </p>
+                </div>
+
+                <div class="live" style="display: none">
+                    <div class="status">
+                        <span class="pill"></span> <span data-i18n-html="footer.live">Vortis is <strong>live!</strong> Come say hi! 😁</span>
+                    </div>
+                    <div class="links">
+                        <a href="http://twitch.tv/vortisrd" target="_blank" class="platform twitch"><i class="ri-twitch-fill"></i></a>
+                        <a href="http://youtube.com/@vortisrd/live" target="_blank" class="platform youtube"><i class="ri-youtube-fill"></i></a>
+                        <a href="http://kick.com/vortisrd" target="_blank" class="platform kick"><i class="ri-kick-fill"></i></a>
+                        <a href="http://tiktok.com/@vortisrd/live" target="_blank" class="platform tiktok"><i class="ri-tiktok-fill"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </footer>
+
+
+    </div>
+    
+
+
+
+
+    <!-- ── URL Import Modal ────────────────────────────────────── -->
+    <wa-dialog id="modalUrlImport" class="modal centered" without-header>
+        
+
+        <div class="creditsrd-header">
+            <img src="images/logo-widget.png" alt="">
+        </div>
+
+        <h3 data-i18n-html="modal.import.title">Import Settings</h3>
+
+        <span data-i18n="modal.import.subtitle">Paste your CreditsRD URL here</span>
+        <wa-input id="importUrl" placeholder="https://vortisrd.github.io/creditsrd/widget.html?..." autocomplete="off">
+            <wa-icon library="remixicon" name="Editor/link-m" slot="start"></wa-icon>
+        </wa-input>
+        
+        <wa-button class="button cancel" slot="footer" id="importUrlCancel" appearance="outlined">
+            <span data-i18n="modal.buttons.cancel">Cancel</span>
+        </wa-button>
+        
+        <wa-button class="button save" slot="footer" id="importUrlConfirm" variant="brand">
+            <span data-i18n="modal.buttons.save">Import</span>
+        </wa-button>
+
+        <input type="hidden" id="emoteIdLegacy" value="">
+    </wa-dialog>
+
+    <div id="loading">
+        <img class="logo" src="images/logo-widget-full.png" alt="">
+        <span id="loadingPercentage"><i class="ri-loader-4-line"></i> <span>0%</span></span>
+    </div>
+            
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+    <script src="https://unpkg.com/@streamerbot/client/dist/streamerbot-client.js"></script>
+
+    <script src="js/i18n-settings.js?nocache=007"></script>
+    
+    <script type="module" src="js/settings.js?nocache=007"></script>
+</body>
+</html>

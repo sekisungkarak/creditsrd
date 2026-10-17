@@ -1,0 +1,69 @@
+{
+	"followers": "Follower",
+	"followersSummary_one": "{count} nuovo follower",
+	"followersSummary_other": "{count} nuovi follower",
+
+	"subs": "Nuovi Iscritti",
+	"subsSummary_one": "{count} nuovo iscritto",
+	"subsSummary_other": "{count} nuovi iscritti",
+
+	"reSubs": "Rinnovi",
+	"reSubsSummary_one": "{count} rinnovo",
+	"reSubsSummary_other": "{count} rinnovi",
+
+	"giftedSubs": "Iscrizioni Regalate",
+	"giftedSubsSummary_one": "{count} iscrizione è stata regalata",
+	"giftedSubsSummary_other": "{count} iscrizioni sono state regalate",
+
+	"raids": "Raid",
+	"raidsSummary_one": "{count} spettatore è arrivato",
+	"raidsSummary_other": "{count} spettatori sono arrivati",
+
+	"bits": "Bit",
+	"bitsSummary_one": "{count} bit è stato inviato",
+	"bitsSummary_other": "{count} bit sono stati inviati",
+
+	"memberships": "Membership",
+	"membershipsSummary_one": "{count} nuovo membro",
+	"membershipsSummary_other": "{count} nuovi membri",
+
+	"giftedMemberships": "Membership Regalate",
+	"giftedMembershipsSummary_one": "{count} membership regalata",
+	"giftedMembershipsSummary_other": "{count} membership regalate",
+
+	"superChats": "Super Chat",
+	"superChatsSummary_one": "{count} Super Chat è stata inviata",
+	"superChatsSummary_other": "{count} Super Chat sono state inviate",
+
+	"superStickers": "Super Sticker",
+	"superStickersSummary_one": "{count} Super Sticker è stato inviato",
+	"superStickersSummary_other": "{count} Super Sticker sono stati inviati",
+
+	"jewels": "Gioielli",
+	"jewelsSummary_one": "{count} gioiello è stato inviato",
+	"jewelsSummary_other": "{count} gioielli sono stati inviati",
+
+	"kicks": "Kick",
+	"kicksSummary_one": "{count} kick è stato inviato",
+	"kicksSummary_other": "{count} kick sono stati inviati",
+
+	"tiktokGifts": "Regali",
+	"tiktokGiftsSummary_one": "{count} moneta in regali",
+	"tiktokGiftsSummary_other": "{count} monete in regali",
+
+	"shares": "Condivisioni",
+	"sharesSummary_one": "{count} condivisione",
+	"sharesSummary_other": "{count} condivisioni",
+
+	"likes": "Mi piace",
+	"likesSummary_one": "{count} Mi piace è stato inviato",
+	"likesSummary_other": "{count} Mi piace sono stati inviati",
+
+	"viewers": "{count} spettatori",
+	"tier": "Livello {tier}",
+	"andMore": "e altri {count}...",
+	"months": "{count} mesi",
+
+	"eventsCount_one": "{count} evento",
+	"eventsCount_other": "{count} eventi"
+}

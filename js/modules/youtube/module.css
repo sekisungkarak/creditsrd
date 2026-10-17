@@ -1,0 +1,9 @@
+#youtube .header {
+    border-bottom: .25cqw solid color-mix(in srgb, #FF0000 75%,transparent);
+}
+
+
+#youtube .pill {
+    background: color-mix(in srgb, #FF0000 50%, transparent);
+    border-color: color-mix(in srgb, #FF0000 75%, transparent);
+}

@@ -1,0 +1,88 @@
+{
+	"readme": {
+		"text": "Scopri come configurarlo <a target=\"_blank\" href=\"https://github.com/vortisrd/creditsrd/blob/main/README.md\">leggendo la documentazione</a>."
+	},
+	"streamerbot": {
+		"title": "Streamer.bot",
+		"server": "IP del server",
+		"port": "Porta",
+		"schema": "Connessione Sicura (WSS)",
+		"schema_hint": "Attiva questa opzione se Streamer.bot è su un server remoto (VPS) con HTTPS/TLS. <strong><u>Lascia disattivato se non sai cosa stai facendo</u> 😊</strong>"
+	},
+	"general": {
+		"title": "Impostazioni Globali",
+		"demo_mode": "Modalità Dimostrativa",
+		"demo_mode_hint": "Avvia CreditsRD in modalità test, generando eventi casuali",
+		"tie": "Collega alla Piattaforma",
+		"tie_hint": "All'avvio dello stream sulla piattaforma selezionata,<br>CreditsRD cancellerà i dati precedenti dal database<br>e ricomincerà da capo.",
+		"tie_info": "Per riavviare i titoli di coda dall'inizio ogni volta che la scena appare, attiva <strong><u>aggiorna browser quando la scena diventa attiva</u></strong> nella tua app di streaming e mantieni disattivato <strong><u>spegni la sorgente quando non è visibile</u></strong> in modo che gli eventi continuino a essere raccolti.",
+		"language": "Lingua",
+		"language_hint": "Imposta la lingua di CreditsRD.",
+		"credits_title": "Titolo",
+		"credits_summary": "Riepilogo",
+		"limit": "Limite Eventi",
+		"limit_hint": "Limita il numero di eventi visualizzati.<br>(Zero per illimitato).",
+		"avatars": "Avatar",
+		"font_family": "Font",
+		"font_family_hint": "Cambia il font di CreditsRD",
+		"speed": "Velocità",
+		"speed_hint": "Cambia la velocità di CreditsRD",
+		"size": "Dimensione",
+		"size_hint": "Cambia la dimensione di CreditsRD",
+		"color": "Colore",
+		"color_hint": "Cambia il colore del font di CreditsRD"
+	},
+	"style": {
+		"title": "Stili Visivi",
+		"load_system_fonts": "Carica Font di Sistema"
+	},
+	"twitch": {
+		"title": "Twitch",
+		"followers": "Follower",
+		"bits": "Bit",
+		"subscriptions": "Iscrizioni",
+		"gifted_subs": "<i class=\"ri-corner-down-right-line\"></i> Iscrizioni Regalate",
+		"powerups": "Riscatti di Power-up",
+		"raids": "Raid"
+	},
+	"youtube": {
+		"title": "YouTube",
+		"superchat": "Super Chat",
+		"super_sticker": "Super Sticker",
+		"memberships": "Membership",
+		"gifted_membership": "<i class=\"ri-corner-down-right-line\"></i> Membership Regalate",
+		"jewels": "Gioielli"
+	},
+	"kick": {
+		"title": "Kick",
+		"api_warning": "Durante i picchi di utilizzo, l'<strong>API di Kick diventa instabile</strong> e impiega più tempo a trasmettere gli eventi. Non si tratta di un problema di Streamer.bot o di CreditsRD. Kick ha un <em>\"glitch dei soldi infiniti\"</em>, quindi spero che migliori in futuro. 😣",
+		"followers": "Follower",
+		"kicks_gift": "Regali di Kicks",
+		"subscriptions": "Iscrizioni",
+		"gifted_subs": "<i class=\"ri-corner-down-right-line\"></i> Iscrizioni Regalate"
+	},
+	"tiktok": {
+		"title": "TikTok",
+		"followers": "Follower",
+		"likes": "Mi piace",
+		"shares": "Condivisioni",
+		"gifts": "Regali",
+		"superfans": "SuperFan/Iscritti"
+	},
+	"footer": {
+		"copy_url": "Copia URL",
+		"import_settings": "Importa Impostazioni",
+		"made_by": "Fatto con ❤️ da <strong>VortisRD</strong>",
+		"live": "Vortis è <strong>in diretta!</strong> Vieni a salutare! 😁"
+	},
+	"modal": {
+		"buttons": {
+			"cancel": "Annulla",
+			"save": "Importa"
+		},
+		"import": {
+			"title": "Importa Impostazioni",
+			"subtitle": "Incolla qui il tuo URL di CreditsRD"
+		}
+	}
+}

@@ -1,0 +1,9 @@
+#twitch .header {
+    border-bottom: .25cqw solid color-mix(in srgb, #9146ff 75%,transparent);
+}
+
+
+#twitch .pill {
+    background: color-mix(in srgb, #9146ff 50%, transparent);
+    border-color: color-mix(in srgb, #9146ff 75%, transparent);
+}

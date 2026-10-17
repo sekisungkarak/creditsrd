@@ -1,0 +1,9 @@
+#kick .header {
+    border-bottom: .25cqw solid color-mix(in srgb, #53fc18 75%,transparent);
+}
+
+
+#kick .pill {
+    background: color-mix(in srgb, #53fc18 50%, transparent);
+    border-color: color-mix(in srgb, #53fc18 75%, transparent);
+}

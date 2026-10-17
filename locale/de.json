@@ -1,0 +1,69 @@
+{
+	"followers": "Follower",
+	"followersSummary_one": "{count} neuer Follower",
+	"followersSummary_other": "{count} neue Follower",
+
+	"subs": "Neue Abos",
+	"subsSummary_one": "{count} neuer Abonnent",
+	"subsSummary_other": "{count} neue Abonnenten",
+
+	"reSubs": "Abo-Verlängerungen",
+	"reSubsSummary_one": "{count} Abo-Verlängerung",
+	"reSubsSummary_other": "{count} Abo-Verlängerungen",
+
+	"giftedSubs": "Verschenkte Abos",
+	"giftedSubsSummary_one": "{count} Abo wurde verschenkt",
+	"giftedSubsSummary_other": "{count} Abos wurden verschenkt",
+
+	"raids": "Raids",
+	"raidsSummary_one": "{count} Zuschauer ist angekommen",
+	"raidsSummary_other": "{count} Zuschauer sind angekommen",
+
+	"bits": "Bits",
+	"bitsSummary_one": "{count} Bit wurde gesendet",
+	"bitsSummary_other": "{count} Bits wurden gesendet",
+
+	"memberships": "Mitgliedschaften",
+	"membershipsSummary_one": "{count} neues Mitglied",
+	"membershipsSummary_other": "{count} neue Mitglieder",
+
+	"giftedMemberships": "Verschenkte Mitgliedschaften",
+	"giftedMembershipsSummary_one": "{count} verschenkte Mitgliedschaft",
+	"giftedMembershipsSummary_other": "{count} verschenkte Mitgliedschaften",
+
+	"superChats": "Super Chats",
+	"superChatsSummary_one": "{count} Super Chat wurde gesendet",
+	"superChatsSummary_other": "{count} Super Chats wurden gesendet",
+
+	"superStickers": "Super Sticker",
+	"superStickersSummary_one": "{count} Super Sticker wurde gesendet",
+	"superStickersSummary_other": "{count} Super Sticker wurden gesendet",
+
+	"jewels": "Juwelen",
+	"jewelsSummary_one": "{count} Juwel wurde gesendet",
+	"jewelsSummary_other": "{count} Juwelen wurden gesendet",
+
+	"kicks": "Kicks",
+	"kicksSummary_one": "{count} Kick wurde gesendet",
+	"kicksSummary_other": "{count} Kicks wurden gesendet",
+
+	"tiktokGifts": "Geschenke",
+	"tiktokGiftsSummary_one": "{count} Münze in Geschenken",
+	"tiktokGiftsSummary_other": "{count} Münzen in Geschenken",
+
+	"shares": "Shares",
+	"sharesSummary_one": "{count} Share",
+	"sharesSummary_other": "{count} Shares",
+
+	"likes": "Likes",
+	"likesSummary_one": "{count} Like wurde gesendet",
+	"likesSummary_other": "{count} Likes wurden gesendet",
+
+	"viewers": "{count} Zuschauer",
+	"tier": "Stufe {tier}",
+	"andMore": "und {count} weitere...",
+	"months": "{count} Monate",
+
+	"eventsCount_one": "{count} Ereignis",
+	"eventsCount_other": "{count} Ereignisse"
+}

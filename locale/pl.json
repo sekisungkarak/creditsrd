@@ -1,0 +1,101 @@
+{
+	"followers": "Obserwujący",
+	"followersSummary_one": "{count} nowy obserwujący",
+	"followersSummary_few": "{count} nowych obserwujących",
+	"followersSummary_many": "{count} nowych obserwujących",
+	"followersSummary_other": "{count} nowych obserwujących",
+
+	"subs": "Nowi Subskrybenci",
+	"subsSummary_one": "{count} nowy subskrybent",
+	"subsSummary_few": "{count} nowych subskrybentów",
+	"subsSummary_many": "{count} nowych subskrybentów",
+	"subsSummary_other": "{count} nowych subskrybentów",
+
+	"reSubs": "Odnowienia",
+	"reSubsSummary_one": "{count} odnowienie",
+	"reSubsSummary_few": "{count} odnowienia",
+	"reSubsSummary_many": "{count} odnowień",
+	"reSubsSummary_other": "{count} odnowień",
+
+	"giftedSubs": "Podarowane Suby",
+	"giftedSubsSummary_one": "{count} subskrypcja została podarowana",
+	"giftedSubsSummary_few": "{count} subskrypcje zostały podarowane",
+	"giftedSubsSummary_many": "{count} subskrypcji zostało podarowanych",
+	"giftedSubsSummary_other": "{count} subskrypcji zostało podarowanych",
+
+	"raids": "Raidy",
+	"raidsSummary_one": "Przybył {count} widz",
+	"raidsSummary_few": "Przybyło {count} widzów",
+	"raidsSummary_many": "Przybyło {count} widzów",
+	"raidsSummary_other": "Przybyło {count} widzów",
+
+	"bits": "Bity",
+	"bitsSummary_one": "Wysłano {count} bit",
+	"bitsSummary_few": "Wysłano {count} bity",
+	"bitsSummary_many": "Wysłano {count} bitów",
+	"bitsSummary_other": "Wysłano {count} bitów",
+
+	"memberships": "Członkostwa",
+	"membershipsSummary_one": "{count} nowy członek",
+	"membershipsSummary_few": "{count} nowych członków",
+	"membershipsSummary_many": "{count} nowych członków",
+	"membershipsSummary_other": "{count} nowych członków",
+
+	"giftedMemberships": "Podarowane Członkostwa",
+	"giftedMembershipsSummary_one": "{count} podarowane członkostwo",
+	"giftedMembershipsSummary_few": "{count} podarowane członkostwa",
+	"giftedMembershipsSummary_many": "{count} podarowanych członkostw",
+	"giftedMembershipsSummary_other": "{count} podarowanych członkostw",
+
+	"superChats": "Super Chaty",
+	"superChatsSummary_one": "Wysłano {count} Super Chat",
+	"superChatsSummary_few": "Wysłano {count} Super Chaty",
+	"superChatsSummary_many": "Wysłano {count} Super Chatów",
+	"superChatsSummary_other": "Wysłano {count} Super Chatów",
+
+	"superStickers": "Super Sticker",
+	"superStickersSummary_one": "Wysłano {count} Super Sticker",
+	"superStickersSummary_few": "Wysłano {count} Super Stickery",
+	"superStickersSummary_many": "Wysłano {count} Super Stickerów",
+	"superStickersSummary_other": "Wysłano {count} Super Stickerów",
+
+	"jewels": "Klejnoty",
+	"jewelsSummary_one": "Wysłano {count} klejnot",
+	"jewelsSummary_few": "Wysłano {count} klejnoty",
+	"jewelsSummary_many": "Wysłano {count} klejnotów",
+	"jewelsSummary_other": "Wysłano {count} klejnotów",
+
+	"kicks": "Kicks",
+	"kicksSummary_one": "Wysłano {count} kick",
+	"kicksSummary_few": "Wysłano {count} kicki",
+	"kicksSummary_many": "Wysłano {count} kicków",
+	"kicksSummary_other": "Wysłano {count} kicków",
+
+	"tiktokGifts": "Prezenty",
+	"tiktokGiftsSummary_one": "{count} moneta w prezentach",
+	"tiktokGiftsSummary_few": "{count} monety w prezentach",
+	"tiktokGiftsSummary_many": "{count} monet w prezentach",
+	"tiktokGiftsSummary_other": "{count} monet w prezentach",
+
+	"shares": "Udostępnienia",
+	"sharesSummary_one": "{count} udostępnienie",
+	"sharesSummary_few": "{count} udostępnienia",
+	"sharesSummary_many": "{count} udostępnień",
+	"sharesSummary_other": "{count} udostępnień",
+
+	"likes": "Polubienia",
+	"likesSummary_one": "Wysłano {count} polubienie",
+	"likesSummary_few": "Wysłano {count} polubienia",
+	"likesSummary_many": "Wysłano {count} polubień",
+	"likesSummary_other": "Wysłano {count} polubień",
+
+	"viewers": "{count} widzów",
+	"tier": "Poziom {tier}",
+	"andMore": "i {count} więcej...",
+	"months": "{count} miesięcy",
+
+	"eventsCount_one": "{count} zdarzenie",
+	"eventsCount_few": "{count} zdarzenia",
+	"eventsCount_many": "{count} zdarzeń",
+	"eventsCount_other": "{count} zdarzeń"
+}

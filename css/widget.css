@@ -1,0 +1,217 @@
+/* ------------------------------------------- */
+/* --------- CHAT - GLOBAL VARIABLES---------- */
+/* ------------------------------------------- */
+
+:root {
+    --dropShadow: 0 2px 4px rgba(0,0,0,0.5);
+    --emoteSize: 22px;
+    --avatarSize: 32px;
+    --blackOpaque: rgba(0,0,0,0.4);
+
+    --transition: all ease-in-out 250ms, opacity ease-in-out 500ms;
+}
+
+
+/* Basic reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sn-notify-outline { --sn-notify-background-color: #27272a; }
+.sn-notify-outline .sn-notify-title { --sn-notify-title-color: #FFFFFF; }
+.sn-notify-outline .sn-notify-text { --sn-notify-text-color: rgba(255,255,255,0.5); }
+
+.sn-notify-outline { --sn-notify-background-color: #27272a; }
+.sn-notify-outline .sn-notify-title { --sn-notify-title-color: #FFFFFF; }
+.sn-notify-outline .sn-notify-text { --sn-notify-text-color: rgba(255,255,255,0.5); }
+
+/* Full-page container styling */
+html {
+    width: 100vw;
+    height: 100dvh;
+    overflow-wrap: break-word;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    height: 100%;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+body.preview {
+    background-color: #121212;
+
+    background-image: linear-gradient(45deg, #1a1a1a 25%, transparent 25%), linear-gradient(-45deg, #1a1a1a 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #1a1a1a 75%), linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+
+/* --------------------------- */
+/* -------- CONTAINER ------- */
+/* -------------------------- */
+
+#container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#container .wrapper {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes roll {
+    from { translate: 0 0; }
+    to   { translate: 0 calc(-100cqh - 100%); }
+}
+
+#credits {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 80cqw;
+    transform: translateX(-50%);
+    padding-bottom: 20cqw;
+    text-align: center;
+    animation: roll var(--true-speed) linear infinite;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+header {
+    margin-bottom: 8cqw;
+}
+
+header h1 {
+    font-size: 7cqw;
+    font-weight: 900;
+    letter-spacing: 0em;
+    line-height: 1;
+    margin: 0 0 1.5cqw 0;
+}
+
+header p {
+    margin: 0;
+    font-size: 2cqw;
+}
+
+
+
+.platform {
+    margin-bottom: 10cqw;
+}
+
+.platform .header {
+    display: flex;
+    align-items: center;
+    gap: 1cqw;
+    margin-bottom: 3cqw;
+    padding-bottom: 1.5cqw;
+}
+
+.platform .header .logo {
+    width: 3cqw;
+    height: 3cqw;
+}
+
+.platform .header h2 {
+    margin: 0;
+    font-size: 3cqw;
+    font-weight: 900;
+    letter-spacing: 0em;
+}
+
+.platform .header small {
+    font-size: 1.5cqw;
+    opacity: 0.5;
+    margin-left: auto;
+}
+
+
+
+.row {
+    display: grid;
+    grid-template-columns: 18cqw 1fr;
+    gap: 2.5cqw;
+    margin-bottom: 3cqw;
+    align-items: start;
+}
+
+.row .event {
+    text-align: right;
+    font-size: 2cqw;
+    font-weight: 600;
+    padding-top: 0.5cqw;
+    line-height: 1.25;
+}
+
+.row .event small {
+    display: block;
+    opacity: 0.5;
+    font-weight: 400;
+    font-size: 1.5cqw;
+}
+
+.row .users {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1cqw;
+}
+
+.row .users .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 1cqw;
+    padding: .5cqw 1.5cqw .5cqw .5cqw;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, .07);
+    border: .15cqw solid rgba(255, 255, 255, .07);
+    font-size: 1.5cqw;
+    font-weight: 800;
+    line-height: 1;
+    color: #FFF;
+}
+
+
+.row .users .pill .avatar {
+    width: 3cqw;
+    height: 3cqw;
+    border-radius: 50%;
+}
+
+.row .users .pill.more {
+    padding: .8cqw 2cqw;
+    margin-right: 100%;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.row .users .pill em {
+    display: inline-block;
+    font-style: normal;
+    font-size: 1.25cqw;
+    margin-left: .1cqw;
+    background: rgba(0,0,0,0.25);
+    padding: 0.5cqw 1cqw;
+    border-radius: 99px;
+
+}
+
+.row .users .pill em .gift-img {
+	height: 2cqw;
+	width: auto;
+	vertical-align: middle;
+    transform: scale(2);
+    margin: 0 1cqw;
+}

@@ -1,0 +1,88 @@
+{
+	"readme": {
+		"text": "Alamin kung paano i-set up sa pamamagitan ng <a target=\"_blank\" href=\"https://github.com/vortisrd/creditsrd/blob/main/README.md\">pagbabasa ng dokumentasyon</a>."
+	},
+	"streamerbot": {
+		"title": "Streamer.bot",
+		"server": "Server IP",
+		"port": "Port",
+		"schema": "Secure na Koneksyon (WSS)",
+		"schema_hint": "I-enable kung ang Streamer.bot ay nasa remote server (VPS) na may HTTPS/TLS. <strong><u>Iwanang naka-off kung hindi mo alam ang ginagawa mo</u> 😊</strong>"
+	},
+	"general": {
+		"title": "Mga Global Setting",
+		"demo_mode": "Demonstration Mode",
+		"demo_mode_hint": "Sinisimulan ang CreditsRD sa test mode, na naghahagis ng mga random na event",
+		"tie": "Itali sa Platform",
+		"tie_hint": "Kapag sinimulan ang stream sa napiling platform,<br>lilinisin ng CreditsRD ang dating data sa database<br>at magsisimula muli.",
+		"tie_info": "Para i-restart ang credits mula sa simula tuwing lalabas ang scene, i-enable ang <strong><u>refresh browser when scene becomes active</u></strong> sa iyong streaming app, at panatilihing naka-disable ang <strong><u>shutdown source when not visible</u></strong> para patuloy na makolekta ang mga event.",
+		"language": "Wika",
+		"language_hint": "Itakda ang wika ng CreditsRD.",
+		"credits_title": "Pamagat",
+		"credits_summary": "Buod",
+		"limit": "Limitasyon ng Event",
+		"limit_hint": "Nililimitahan ang bilang ng mga ipinapakitang event.<br>(Zero para walang limitasyon).",
+		"avatars": "Mga Avatar",
+		"font_family": "Font Family",
+		"font_family_hint": "Binabago ang font ng CreditsRD",
+		"speed": "Bilis",
+		"speed_hint": "Binabago ang bilis ng CreditsRD",
+		"size": "Laki",
+		"size_hint": "Binabago ang laki ng CreditsRD",
+		"color": "Kulay",
+		"color_hint": "Binabago ang kulay ng font ng CreditsRD"
+	},
+	"style": {
+		"title": "Mga Visual Style",
+		"load_system_fonts": "I-load ang mga System Fonts"
+	},
+	"twitch": {
+		"title": "Twitch",
+		"followers": "Mga Follower",
+		"bits": "Mga Bit",
+		"subscriptions": "Mga Subscription",
+		"gifted_subs": "<i class=\"ri-corner-down-right-line\"></i> Mga Na-gift na Sub",
+		"powerups": "Mga Power-up Redemption",
+		"raids": "Mga Raid"
+	},
+	"youtube": {
+		"title": "YouTube",
+		"superchat": "Super Chat",
+		"super_sticker": "Super Sticker",
+		"memberships": "Membership",
+		"gifted_membership": "<i class=\"ri-corner-down-right-line\"></i> Mga Na-gift na Membership",
+		"jewels": "Alahas"
+	},
+	"kick": {
+		"title": "Kick",
+		"api_warning": "Sa peak usage, <strong>nagiging hindi stable ang API ng Kick</strong> at mas matagal mag-relay ng mga event. Hindi ito problema ng Streamer.bot o ng CreditsRD. Ang Kick ay may <em>\"infinite money glitch\"</em>, kaya sana gumanda ito sa hinaharap. 😣",
+		"followers": "Mga Follower",
+		"kicks_gift": "Kicks Gift",
+		"subscriptions": "Mga Subscription",
+		"gifted_subs": "<i class=\"ri-corner-down-right-line\"></i> Mga Na-gift na Sub"
+	},
+	"tiktok": {
+		"title": "TikTok",
+		"followers": "Mga Follower",
+		"likes": "Mga Like",
+		"shares": "Mga Share",
+		"gifts": "Mga Regalo",
+		"superfans": "SuperFans/Subscribers"
+	},
+	"footer": {
+		"copy_url": "Kopyahin ang URL",
+		"import_settings": "I-import ang mga Setting",
+		"made_by": "Ginawa nang may ❤️ ni <strong>VortisRD</strong>",
+		"live": "<strong>Live</strong> si Vortis! Halika at bumati! 😁"
+	},
+	"modal": {
+		"buttons": {
+			"cancel": "Kanselahin",
+			"save": "I-import"
+		},
+		"import": {
+			"title": "I-import ang mga Setting",
+			"subtitle": "I-paste dito ang iyong CreditsRD URL"
+		}
+	}
+}

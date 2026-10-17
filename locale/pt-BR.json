@@ -1,0 +1,69 @@
+{
+	"followers": "Seguidores",
+	"followersSummary_one": "{count} novo seguidor",
+	"followersSummary_other": "{count} novos seguidores",
+
+	"subs": "Novos Inscritos",
+	"subsSummary_one": "{count} novo inscrito",
+	"subsSummary_other": "{count} novos inscritos",
+
+	"reSubs": "Renovações",
+	"reSubsSummary_one": "{count} renovação",
+	"reSubsSummary_other": "{count} renovações",
+
+	"giftedSubs": "Inscrições Presenteadas",
+	"giftedSubsSummary_one": "{count} inscrição foi presenteada",
+	"giftedSubsSummary_other": "{count} inscrições foram presenteadas",
+
+	"raids": "Raids",
+	"raidsSummary_one": "{count} espectador chegou",
+	"raidsSummary_other": "{count} espectadores chegaram",
+
+	"bits": "Bits",
+	"bitsSummary_one": "{count} bit foi enviado",
+	"bitsSummary_other": "{count} bits foram enviados",
+
+	"memberships": "Assinaturas",
+	"membershipsSummary_one": "{count} novo membro",
+	"membershipsSummary_other": "{count} novos membros",
+
+	"giftedMemberships": "Assinatura Presenteadas",
+	"giftedMembershipsSummary_one": "{count} assinatura presenteada",
+	"giftedMembershipsSummary_other": "{count} assinaturas presenteadas",
+
+	"superChats": "Super Chats",
+	"superChatsSummary_one": "{count} Super Chat foi enviado",
+	"superChatsSummary_other": "{count} Super Chats foram enviados",
+
+	"superStickers": "Super Sticker",
+	"superStickersSummary_one": "{count} Super Sticker foi enviado",
+	"superStickersSummary_other": "{count} Super Stickers foram enviados",
+
+	"jewels": "Joias",
+	"jewelsSummary_one": "{count} joia foi enviada",
+	"jewelsSummary_other": "{count} joias foram enviadas",
+
+	"kicks": "Kicks",
+	"kicksSummary_one": "{count} kick foi enviado",
+	"kicksSummary_other": "{count} kicks foram enviados",
+
+	"tiktokGifts": "Presentes",
+	"tiktokGiftsSummary_one": "{count} moeda em presentes",
+	"tiktokGiftsSummary_other": "{count} moedas em presentes",
+
+	"shares": "Compartilhamentos",
+	"sharesSummary_one": "{count} compartilhamento",
+	"sharesSummary_other": "{count} compartilhamentos",
+
+	"likes": "Curtidas",
+	"likesSummary_one": "{count} curtida foi enviada",
+	"likesSummary_other": "{count} curtidas foram enviadas",
+
+	"viewers": "{count} espectadores",
+	"tier": "Nível {tier}",
+	"andMore": "e mais {count}...",
+	"months": "{count} meses",
+
+	"eventsCount_one": "{count} evento",
+	"eventsCount_other": "{count} eventos"
+}

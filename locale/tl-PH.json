@@ -1,0 +1,69 @@
+{
+	"followers": "Mga Follower",
+	"followersSummary_one": "{count} bagong follower",
+	"followersSummary_other": "{count} bagong follower",
+
+	"subs": "Mga Bagong Sub",
+	"subsSummary_one": "{count} bagong subscriber",
+	"subsSummary_other": "{count} bagong subscriber",
+
+	"reSubs": "Mga Resub",
+	"reSubsSummary_one": "{count} resubscription",
+	"reSubsSummary_other": "{count} resubscription",
+
+	"giftedSubs": "Mga Na-gift na Sub",
+	"giftedSubsSummary_one": "{count} subscription ang na-gift",
+	"giftedSubsSummary_other": "{count} subscription ang na-gift",
+
+	"raids": "Mga Raid",
+	"raidsSummary_one": "{count} manonood ang dumating",
+	"raidsSummary_other": "{count} manonood ang dumating",
+
+	"bits": "Mga Bit",
+	"bitsSummary_one": "{count} bit ang naipadala",
+	"bitsSummary_other": "{count} bit ang naipadala",
+
+	"memberships": "Mga Membership",
+	"membershipsSummary_one": "{count} bagong miyembro",
+	"membershipsSummary_other": "{count} bagong miyembro",
+
+	"giftedMemberships": "Mga Na-gift na Membership",
+	"giftedMembershipsSummary_one": "{count} membership ang na-gift",
+	"giftedMembershipsSummary_other": "{count} membership ang na-gift",
+
+	"superChats": "Mga Super Chat",
+	"superChatsSummary_one": "{count} Super Chat ang naipadala",
+	"superChatsSummary_other": "{count} Super Chat ang naipadala",
+
+	"superStickers": "Super Sticker",
+	"superStickersSummary_one": "{count} Super Sticker ang naipadala",
+	"superStickersSummary_other": "{count} Super Sticker ang naipadala",
+
+	"jewels": "Alahas",
+	"jewelsSummary_one": "{count} alahas ang naipadala",
+	"jewelsSummary_other": "{count} alahas ang naipadala",
+
+	"kicks": "Mga Kick",
+	"kicksSummary_one": "{count} kick ang naipadala",
+	"kicksSummary_other": "{count} kick ang naipadala",
+
+	"tiktokGifts": "Mga Regalo",
+	"tiktokGiftsSummary_one": "{count} coin sa mga regalo",
+	"tiktokGiftsSummary_other": "{count} coin sa mga regalo",
+
+	"shares": "Mga Share",
+	"sharesSummary_one": "{count} share",
+	"sharesSummary_other": "{count} share",
+
+	"likes": "Mga Like",
+	"likesSummary_one": "{count} like ang naipadala",
+	"likesSummary_other": "{count} like ang naipadala",
+
+	"viewers": "{count} manonood",
+	"tier": "Tier {tier}",
+	"andMore": "at {count} pa...",
+	"months": "{count} buwan",
+
+	"eventsCount_one": "{count} event",
+	"eventsCount_other": "{count} event"
+}
