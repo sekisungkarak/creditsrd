@@ -42,6 +42,7 @@ body {
     height: 100%;
     overflow: hidden;
     font-size: 16px;
+    background-color: #121212;
 }
 
 body.preview {
@@ -214,4 +215,58 @@ header p {
 	vertical-align: middle;
     transform: scale(2);
     margin: 0 1cqw;
+}
+
+
+
+
+
+@media (orientation: portrait) {
+    #credits {
+        width: 90cqw;
+    }
+
+    header h1 {
+        font-size: 9cqw;
+    }
+
+    header p {
+        font-size: 5cqw;
+    }
+
+    .platform .header h2 {
+        font-size: 5cqw;
+    }
+
+    .platform .header small {
+        font-size: 3cqw;
+    }
+
+    .row {
+        grid-template-columns: 20cqw 1fr;
+    }
+
+    .row .event {
+        font-size: 3cqw;
+    }
+
+    .row .event small {
+        font-size: 2cqw;
+    }
+
+    .row .users .pill {
+        font-size: 2.25cqw;
+        font-weight: normal;
+    }
+
+
+    .row .users .pill .avatar {
+        width: 5cqw;
+        height: 5cqw;
+    }
+
+    .row .users .pill em {
+        font-size: 2cqw;
+    }
+
 }

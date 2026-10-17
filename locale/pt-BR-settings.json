@@ -14,7 +14,7 @@
 		"demo_mode": "Modo de Demonstração",
 		"demo_mode_hint": "Inicia o CreditsRD em modo de teste, lançando eventos aleatórios",
 		"tie": "Vincular à Plataforma",
-		"tie_hint": "Ao iniciar a live na plataforma selecionada,<br>o CreditsRD limpará os dados anteriores do banco de dados<br>e começará do zero.",
+		"tie_hint": "Ao iniciar a live na plataforma selecionada,<br>o CreditsRD limpará os dados anteriores do banco de dados e começará do zero.",
 		"tie_info": "Para reiniciar os créditos do começo toda vez que a cena aparecer, ative <strong><u>atualizar navegador quando a cena ficar ativa</u></strong> no seu aplicativo de streaming e mantenha <strong><u>desligar fonte quando não estiver visível</u></strong> desativado para que os eventos continuem sendo coletados.",
 		"language": "Idioma",
 		"language_hint": "Define o idioma do CreditsRD.",
@@ -48,7 +48,7 @@
 	"youtube": {
 		"title": "YouTube",
 		"superchat": "Super Chat",
-		"super_sticker": "Super Sticker",
+		"super_sticker": "Super Stickers",
 		"memberships": "Assinatura",
 		"gifted_membership": "<i class=\"ri-corner-down-right-line\"></i> Assinaturas Presenteadas",
 		"jewels": "Joias"
