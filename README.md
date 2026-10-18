@@ -5,18 +5,17 @@ A Multistream End Credits Overlay. Supports **Twitch**, **YouTube**, **TikTok** 
 ![CreditsRD Config UI](https://i.imgur.com/lByJMQC.jpeg)
 
 ## 🛠️ Setting it up
-
-### Detailed tutorial
-First, download **[Streamer.bot](https://streamer.bot/)** for **Twitch**, **YouTube** and **Kick** support and the **[TikFinity Desktop App](https://app.tikfinity.com/)** for TikTok (partial) support. Make sure your **Twitch**, **YouTube** and **Kick** accounts are connected on **Streamer.bot**. Also have **TikFinity Desktop App** installed and your account on **TikTok** setup. **BOTH APPS NEED TO RUN ON THE SAME PC**.
+First, download **[Streamer.bot](https://streamer.bot/)** for **Twitch**, **YouTube** and **Kick** support and the **[TikFinity Desktop App](https://app.tikfinity.com/)** for TikTok (partial) support. Make sure your **Twitch**, **YouTube** and **Kick** accounts are connected on **Streamer.bot**. Also have **TikFinity Desktop App** installed and your account on **TikTok** setup. 
 
 If you have both of these ready, follow these steps:
 
 1. On **Streamer.bot**, go to **Server/Clients → WebSocket Server** and make sure it is running.
-2. Open the [Settings Page](https://vortisrd.github.io/credits) in your browser.
+2. Open the [Settings Page](https://vortisrd.github.io/creditsrd) in your browser.
 3. Choose your desired options.
 4. **Don't forget select a platform to tie CreditsRD to.** It will detect when a stream on that platform starts then it will clean the credits database to start collecting newer events.
-4. Click **"Copy URL"**.
-5. Add the copied URL as a Browser Source in OBS.
+5. Select how many events you will want to show per category. If goes beyond that, it will show "and X more...".
+6. Click **"Copy URL"**.
+7. Add the copied URL as a Browser Source in OBS.
 
 ---
 
