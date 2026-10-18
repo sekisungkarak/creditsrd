@@ -208,7 +208,7 @@ async function tiktokSubMessage(data) {
 	addEvent({
 		id: `tiktok-subs-${id}-${Date.now()}`,
 		platform: "tiktok",
-		type: "sub",
+		type: "superFan",
 		ts: Date.now(),
 		user: { id, name, avatar },
         data: { }

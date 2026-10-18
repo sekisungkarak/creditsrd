@@ -51,6 +51,10 @@
 	"tiktokGiftsSummary_one": "{count} coin sa mga regalo",
 	"tiktokGiftsSummary_other": "{count} coin sa mga regalo",
 
+	"superFans": "Mga Bagong Sub/Super Fan",
+	"superFansSummary_one": "{count} bagong sub/super fan",
+	"superFansSummary_other": "{count} bagong sub/super fan",
+
 	"shares": "Mga Share",
 	"sharesSummary_one": "{count} share",
 	"sharesSummary_other": "{count} share",

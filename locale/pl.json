@@ -77,6 +77,10 @@
 	"tiktokGiftsSummary_many": "{count} monet w prezentach",
 	"tiktokGiftsSummary_other": "{count} monet w prezentach",
 
+	"superFans": "Nowi subskrybenci/Superfani",
+	"superFansSummary_one": "{count} nowy subskrybent/superfan",
+	"superFansSummary_other": "{count} nowych subskrybentów/superfanów",
+
 	"shares": "Udostępnienia",
 	"sharesSummary_one": "{count} udostępnienie",
 	"sharesSummary_few": "{count} udostępnienia",

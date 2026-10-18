@@ -51,6 +51,10 @@
 	"tiktokGiftsSummary_one": "{count} pièce en cadeaux",
 	"tiktokGiftsSummary_other": "{count} pièces en cadeaux",
 
+	"superFans": "Nouveaux abonnés/Super fans",
+	"superFansSummary_one": "{count} nouvel abonné/super fan",
+	"superFansSummary_other": "{count} nouveaux abonnés/super fans",
+
 	"shares": "Partages",
 	"sharesSummary_one": "{count} partage",
 	"sharesSummary_other": "{count} partages",

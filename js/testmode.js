@@ -318,7 +318,7 @@ const TestMode = (() => {
         });
     };
 
-    generators['tiktok:sub'] = () => {
+    generators['tiktok:superfan'] = () => {
         if (typeof tiktokSubMessage !== 'function') return;
         tiktokSubMessage({
             ...tiktokBase(),
@@ -382,7 +382,7 @@ const TestMode = (() => {
         'tiktok:follow':          () => showTikTokFollows,
         'tiktok:share':           () => showTikTokShares,
         'tiktok:like':            () => showTikTokLikes,
-        'tiktok:sub':             () => showTikTokSubs,
+        'tiktok:superfan':        () => showTikTokSubs,
         'tiktok:gift':            () => showTikTokGifts
     };
 

@@ -51,6 +51,10 @@
 	"tiktokGiftsSummary_one": "{count} Münze in Geschenken",
 	"tiktokGiftsSummary_other": "{count} Münzen in Geschenken",
 
+	"superFans": "Neue Abonnenten/Superfans",
+	"superFansSummary_one": "{count} neuer Abonnent/Superfan",
+	"superFansSummary_other": "{count} neue Abonnenten/Superfans",
+
 	"shares": "Shares",
 	"sharesSummary_one": "{count} Share",
 	"sharesSummary_other": "{count} Shares",

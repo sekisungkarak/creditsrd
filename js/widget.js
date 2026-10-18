@@ -104,6 +104,16 @@ const SECTIONS = [
 		}
 	},
 	{
+		types: ["superFan"],
+		maxVisible: limit,
+		labelKey: "superFans",
+		summaryKey: "superFansSummary",
+		format: (_, evs) => {
+			const { tier, level } = evs[0].data;
+			return tier ? tRD("tier", { tier }) : level ? `${level}` : "";
+		}
+	},
+	{
 		types: ["resub"],
 		maxVisible: limit,
 		labelKey: "reSubs",
