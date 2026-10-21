@@ -217,6 +217,23 @@ header p {
 }
 
 
+.row .users.has-subgroups {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	gap: 2em;
+}
+
+.row .users.has-subgroups .subgroup-title {
+	margin-bottom: 0.5em;
+    font-size: 1.75cqw;
+    text-align: left;
+}
+
+.row .users.has-subgroups .subgroup-pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6em;
+}
 
 
 

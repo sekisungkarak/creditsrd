@@ -23,6 +23,9 @@ const twitchMessageHandlers = {
     'Twitch.Follow': (response) => {
         twitchFollowMessage(response.data);
     },
+    'Twitch.RewardRedemption': (response) => {
+        twitchRewardRedemption(response.data);
+    },
     'Twitch.Cheer': (response) => {
         twitchBitsMessage(response.data);
     },
@@ -79,6 +82,22 @@ async function twitchFollowMessage(data) {
 		type: "follow",
 		ts: Date.now(),
 		user: { id, name, avatar }
+	});
+}
+
+function twitchRewardRedemption(data) {
+    
+	if (showTwitchRewardRedemptions == false) return;
+    
+	const { id, user_id, user_name, reward } = data;
+
+	addEvent({
+		id: `tw-reward-${id}`,
+		platform: "twitch",
+		type: "reward",
+		ts: Date.now(),
+		user: { id: user_id, name: user_name },
+		data: { rewardName: reward.title, cost: reward.cost }
 	});
 }
 

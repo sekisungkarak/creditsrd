@@ -5,6 +5,16 @@
 	"followersSummary_many": "{count} nowych obserwujących",
 	"followersSummary_other": "{count} nowych obserwujących",
 
+	"channelPoints": "Punkty Kanału",
+	"peopleRedeemed_one": "{count} osoba zrealizowała",
+	"peopleRedeemed_few": "{count} osoby zrealizowały",
+	"peopleRedeemed_many": "{count} osób zrealizowało",
+	"peopleRedeemed_other": "{count} osób zrealizowało",
+	"pointsSpent_one": "Wydano {count} punkt",
+	"pointsSpent_few": "Wydano {count} punkty",
+	"pointsSpent_many": "Wydano {count} punktów",
+	"pointsSpent_other": "Wydano {count} punktów",
+
 	"subs": "Nowi Subskrybenci",
 	"subsSummary_one": "{count} nowy subskrybent",
 	"subsSummary_few": "{count} nowych subskrybentów",

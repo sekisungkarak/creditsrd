@@ -3,6 +3,12 @@
 	"followersSummary_one": "{count} bagong follower",
 	"followersSummary_other": "{count} bagong follower",
 
+	"channelPoints": "Mga Channel Point",
+	"peopleRedeemed_one": "{count} tao ang nag-redeem",
+	"peopleRedeemed_other": "{count} tao ang nag-redeem",
+	"pointsSpent_one": "{count} point ang nagastos",
+	"pointsSpent_other": "{count} point ang nagastos",
+
 	"subs": "Mga Bagong Sub",
 	"subsSummary_one": "{count} bagong subscriber",
 	"subsSummary_other": "{count} bagong subscriber",

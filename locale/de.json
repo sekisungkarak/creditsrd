@@ -3,6 +3,12 @@
 	"followersSummary_one": "{count} neuer Follower",
 	"followersSummary_other": "{count} neue Follower",
 
+	"channelPoints": "Kanalpunkte",
+	"peopleRedeemed_one": "{count} Person hat eingelöst",
+	"peopleRedeemed_other": "{count} Personen haben eingelöst",
+	"pointsSpent_one": "{count} Punkt ausgegeben",
+	"pointsSpent_other": "{count} Punkte ausgegeben",
+
 	"subs": "Neue Abos",
 	"subsSummary_one": "{count} neuer Abonnent",
 	"subsSummary_other": "{count} neue Abonnenten",

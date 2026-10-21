@@ -3,6 +3,12 @@
   "followersSummary_one": "{count} new follower",
   "followersSummary_other": "{count} new followers",
 
+  "channelPoints": "Channel Points",
+  "peopleRedeemed_one": "{count} person redeemed",
+  "peopleRedeemed_other": "{count} people redeemed",
+  "pointsSpent_one": "{count} point spent",
+  "pointsSpent_other": "{count} points spent",  
+
   "subs": "New Subs",
   "subsSummary_one": "{count} new subscriber",
   "subsSummary_other": "{count} new subscribers",

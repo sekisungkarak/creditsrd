@@ -9,6 +9,7 @@ const showKickKicks                 = getURLParam("showKickKicks", true);
 const showKickSubs                  = getURLParam("showKickSubs", true);
 const showKickGiftedSubs            = getURLParam("showKickGiftedSubs", true);
 const showKickMassGiftedSubs        = getURLParam("showKickMassGiftedSubs", true);
+const showKickRewardRedemptions     = getURLParam("showKickRewardRedemptions", true);
 
 
 // KICK EVENTS HANDLERS
@@ -16,6 +17,9 @@ const showKickMassGiftedSubs        = getURLParam("showKickMassGiftedSubs", true
 const kickMessageHandlers = {
     'Kick.Follow': (response) => {
         kickFollowMessage(response.data);
+    },
+    'Kick.RewardRedemption': (response) => {
+        kickRewardRedemptionFromStreamerBot(response.data);
     },
     'Kick.Subscription': (response) => {
         kickSubMessageFromStreamerBot(response.data);
@@ -65,6 +69,22 @@ async function kickFollowMessage(data) {
 		type: "follow",
 		ts: Date.now(),
 		user: { id, name, avatar }
+	});
+}
+
+
+function kickRewardRedemptionFromStreamerBot(data) {
+    if (showKickRewardRedemptions == false) return;
+
+	const { id, redeemer, reward } = data;
+
+	addEvent({
+		id: `kick-reward-${id}`,
+		platform: "kick",
+		type: "reward",
+		ts: Date.now(),
+		user: { id: redeemer.id, name: redeemer.name },
+		data: { rewardName: reward.title, cost: reward.cost }
 	});
 }
 

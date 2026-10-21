@@ -1,13 +1,13 @@
-const title                         = getURLParam("title", "Thank you for watching!");
-const summary                       = getURLParam("summary", "See you next time. 😁");
-const showAvatar                    = getURLParam("showAvatar", true);
-const platform                     	= getURLParam("platform", "twitch");
-const color                         = getURLParam("color", "#FFFFFF");
-const font                          = getURLParam("font", "DM Sans");
-const size                          = getURLParam("size", 1);
-const speed                         = getURLParam("speed", 1);
-const limitParam 					= Number(getURLParam("limit", 15));
-const limit 						= Number.isFinite(limitParam) && limitParam >= 0 ? Math.floor(limitParam) : 15;
+const title        = getURLParam("title", "Thank you for watching!");
+const summary      = getURLParam("summary", "See you next time. 😁");
+const showAvatar   = getURLParam("showAvatar", true);
+const platform     = getURLParam("platform", "twitch");
+const color        = getURLParam("color", "#FFFFFF");
+const font         = getURLParam("font", "DM Sans");
+const size         = getURLParam("size", 1);
+const speed        = getURLParam("speed", 1);
+const limitParam   = Number(getURLParam("limit", 15));
+const limit        = Number.isFinite(limitParam) && limitParam >= 0 ? Math.floor(limitParam) : 15;
 
 const widgetBody = document.body;
 const container = document.querySelector('#credits');
@@ -27,9 +27,9 @@ function setSpeed() {
 }
 
 function randomIntBetween(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function creditsRdReset(source) {
@@ -121,7 +121,7 @@ const SECTIONS = [
 		format: (_, evs) => {
 			const months = Math.max(...evs.map((e) => e.data.months ?? 0));
 			const tier = evs[0].data.tier;
-			return tier ? `x${months} (${tRD("tier", { tier })})` : `x${months}`;
+			return tier ? `x${months} [${tRD("tier", { tier })}]` : `x${months}`;
 		}
 	},
 	{
@@ -193,7 +193,7 @@ const SECTIONS = [
 		format: (total) => `x${total}`
 	},
 	{
-	types: ["jewel"],
+		types: ["jewel"],
 		labelKey: "jewels",
 		maxVisible: limit,
 		summaryKey: "jewelsSummary",
@@ -241,6 +241,19 @@ const SECTIONS = [
 			parts.push(`[${total.toLocaleString("en-US")}🪙]`);
 			return parts;
 		}
+	},
+	{
+		types: ["reward"],
+		maxVisible: limit,
+		labelKey: "channelPoints",
+		summaryText: (entries) => {
+			const people = new Set(entries.map((e) => e.user.id)).size;
+			const points = sum(entries, (entry) => sum(entry.events, (e) => e.data.cost));
+			return `${tPlural("peopleRedeemed", people)}, ${tPlural("pointsSpent", points)}`;
+		},
+		subGroup: (e) => e.data.rewardName ?? "Reward",
+		value: () => 1,
+		format: (total) => `x${total}`
 	}
 ];
 
@@ -288,8 +301,11 @@ function formatMoney(amount, currency) {
 function buildEntries(section, platformEvents) {
 	const wanted = platformEvents.filter((e) => section.types.includes(e.type));
 
+	// subGroup also splits entries per user, like groupKey does
+	const groupKey = section.subGroup ?? section.groupKey;
+
 	const byUser = groupBy(wanted, (e) =>
-		section.groupKey ? `${e.user.id}|${section.groupKey(e)}` : e.user.id
+		groupKey ? `${e.user.id}|${groupKey(e)}` : e.user.id
 	);
 
 	const entries = [...byUser.values()].map((evs) => {
@@ -299,6 +315,8 @@ function buildEntries(section, platformEvents) {
 			total,
 			count: evs.length,
 			firstTs: evs[0].ts,
+			subGroup: section.subGroup?.(evs[0]),
+			events: evs,
 			detail: section.format ? section.format(total, evs) : "",
 		};
 	});
@@ -349,11 +367,21 @@ function buildPill(user, detail) {
 	return pill;
 }
 
+function appendPills(parent, section, entries) {
+	const visible = section.maxVisible ? entries.slice(0, section.maxVisible) : entries;
+	for (const entry of visible) parent.append(buildPill(entry.user, entry.detail));
+
+	const hidden = entries.length - visible.length;
+	if (hidden > 0) parent.append(el("span", "pill more", tRD("andMore", { count: hidden })));
+}
+
 function buildRow(section, entries) {
 	const row = el("div", "row");
 	const label = el("div", "event", tRD(section.labelKey));
 
-	if (section.summaryKey) {
+	if (section.summaryText) {
+		label.append(el("small", null, section.summaryText(entries)));
+	} else if (section.summaryKey) {
 		const total = section.summaryCount
 			? sum(entries, (e) => e.count)
 			: section.value
@@ -365,12 +393,23 @@ function buildRow(section, entries) {
 
 	row.append(label);
 
-	const users = el("div", "users");
-	const visible = section.maxVisible ? entries.slice(0, section.maxVisible) : entries;
-	for (const entry of visible) users.append(buildPill(entry.user, entry.detail));
+	const users = el("div", section.subGroup ? "users has-subgroups" : "users");
 
-	const hidden = entries.length - visible.length;
-	if (hidden > 0) users.append(el("span", "pill more", tRD("andMore", { count: hidden })));
+	if (section.subGroup) {
+		// Most redeemed sub-category first
+		const groups = [...groupBy(entries, (e) => e.subGroup)]
+			.sort((a, b) => sum(b[1], (e) => e.total) - sum(a[1], (e) => e.total));
+
+		for (const [groupTitle, groupEntries] of groups) {
+			const group = el("div", "subgroup");
+			const pills = el("div", "subgroup-pills");
+			appendPills(pills, section, groupEntries);
+			group.append(el("div", "subgroup-title", groupTitle), pills);
+			users.append(group);
+		}
+	} else {
+		appendPills(users, section, entries);
+	}
 
 	row.append(users);
 	return row;
@@ -547,14 +586,13 @@ async function addEvent(event) {
 }
 
 async function clearSession() {
-   	await initCredits(true);
+	await initCredits(true);
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-    console.debug(`[CreditsRD] Initializing ...`);
+	console.debug(`[CreditsRD] Initializing ...`);
 
-    await loadLang();
+	await loadLang();
 	initCredits();
 	setSpeed();
-
 });
