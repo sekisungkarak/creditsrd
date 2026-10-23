@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // TIKTOK CONNECT HANDLER
 
 async function tiktokConnection() {
-    const tikfinityWebSocketURL = 'ws://localhost:21213/';
+    const tikfinityWebSocketURL = 'ws://localhost:47800/';
     const reconnectDelay = 10000; 
     const maxTries = 20;
     let retryCount = 0;
